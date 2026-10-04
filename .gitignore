@@ -1,0 +1,9 @@
+mlflow.db
+mlruns/
+processed_data/
+__pycache__/ 
+.ruff_cache/ 
+report-*.xml
+.DS_Store 
+Thumbs.db
+desktop.ini
