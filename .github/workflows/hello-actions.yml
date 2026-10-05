@@ -1,13 +1,12 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} tests Actions
+
 on: [push, workflow_dispatch]
-Explore-GitHub-Actions:
-  runs-on: ubuntu-latest
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event_name }}"
-      - run: echo "${{ runner.os }}"
-      - run: echo "${{ github.ref }}"
-      - run: echo "${{ github.repository }}"
-      - uses: actions/checkout@v4
-      - run: ls ${{ github.workspace }}
-      - run: echo "${{ job.status }}"
+      - name: Show repository and runner
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Runner OS: ${{ runner.os }}"
